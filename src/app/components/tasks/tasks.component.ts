@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+//import { ConsoleReporter } from 'jasmine';
 import { TaskService } from 'src/app/services/task.service';
 import { Task } from '../../Task';
 
@@ -23,6 +24,9 @@ export class TasksComponent implements OnInit {
         () => this.tasks = this.tasks.filter((t) => t.id !== task.id));
   }
 
-
+  toggleReminder(task: Task) {
+    task.reminder = !task.reminder;
+    this.taskService.updateTaskReminder(task);
+  }
   
 }
