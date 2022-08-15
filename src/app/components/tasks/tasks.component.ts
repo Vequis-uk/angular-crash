@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-//import { ConsoleReporter } from 'jasmine';
 import { TaskService } from 'src/app/services/task.service';
 import { Task } from '../../Task';
 
@@ -30,7 +29,7 @@ export class TasksComponent implements OnInit {
   }
   
   addTask(task: Task) {
-    this.taskService.addTask(task).subscribe((task) => this.tasks.push(task));
+    this.taskService.addTask(task).subscribe((task) => (this.tasks.push(task)));
   }
   
 }

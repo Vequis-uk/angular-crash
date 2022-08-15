@@ -22,7 +22,7 @@ export class AddTaskComponent implements OnInit {
       alert('Please Add A Task!');
       return;
     }
-    const newTask = {
+    const newTask: Task = {
       text: this.text,
       day: this.day,
       reminder: this.reminder
